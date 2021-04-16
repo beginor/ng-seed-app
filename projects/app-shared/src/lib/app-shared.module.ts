@@ -4,9 +4,13 @@ import { AppSharedComponent } from './app-shared.component';
 
 
 @NgModule({
-  declarations: [AppSharedComponent],
+  declarations: [
+    AppSharedComponent
+  ],
   imports: [
   ],
-  exports: [AppSharedComponent]
+  exports: [
+    AppSharedComponent
+  ]
 })
 export class AppSharedModule { }
