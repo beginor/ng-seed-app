@@ -1,6 +1,6 @@
 # AppShared
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.11.
+This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.14.
 
 ## Code scaffolding
 
