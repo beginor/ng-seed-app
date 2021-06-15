@@ -31,6 +31,15 @@
             "tsConfig": "projects/app-shared/tsconfig.spec.json",
             "karmaConfig": "projects/app-shared/karma.conf.js"
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/app-shared/**/*.ts",
+              "projects/app-shared/**/*.html"
+            ]
+          }
         }
       }
     },
@@ -133,6 +142,15 @@
               "projects/handset/src/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/handset/**/*.ts",
+              "projects/handset/**/*.html"
+            ]
           }
         }
       }
@@ -237,6 +255,15 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/tablet/**/*.ts",
+              "projects/tablet/**/*.html"
+            ]
+          }
         }
       }
     },
@@ -339,6 +366,15 @@
               "projects/web/src/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/web/**/*.ts",
+              "projects/web/**/*.html"
+            ]
           }
         }
       }
