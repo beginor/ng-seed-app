@@ -9,31 +9,32 @@ Seed project build with [Angular](https://angular.io/), [Font Awesome](https://f
 - ng-bootstrap
 - font awesome
 - angular-cli
+- pnpm
 
 ## Usage
 
   1. Clone or fork this repository with git:
 
      ```shell
-     git clone https://github.com/angular/ng-seed.git
+     git clone https://github.com/angular/ng-seed-app.git
      ```
 
-  2. Install dependencies with npm:
+  2. Install dependencies with pnpm:
 
      ```shell
-     npm install
+     pnpm install
      ```
 
   3. Start with command
 
      ```shell
-     npm start
+     pnpm start
      ```
 
   4. Create a build
 
      ```shell
-     npm run build
+     pnpm run build
      ```
 
   5. Happy coding!.
