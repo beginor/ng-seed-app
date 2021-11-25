@@ -1,12 +1,25 @@
-import { enableProdMode } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { registerLocaleData } from '@angular/common';
+import zhHans from '@angular/common/locales/zh-Hans';
+import zhHansEx from '@angular/common/locales/extra/zh-Hans';
+import {
+    enableProdMode,
+    ɵNgModuleFactory as NgModuleFactory
+} from '@angular/core';
+import { platformBrowser } from '@angular/platform-browser';
 
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
+registerLocaleData(zhHans, 'zh-Hans', zhHansEx);
+
 if (environment.production) {
-  enableProdMode();
+    enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+platformBrowser().bootstrapModuleFactory(new NgModuleFactory(AppModule))
+    .then(() => {
+        // console.log('app bootstrap');
+    })
+    .catch(err => {
+        console.error(err);
+    });

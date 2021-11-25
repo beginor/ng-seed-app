@@ -2,11 +2,16 @@
   "name": "ng-seed-cli",
   "version": "0.0.0",
   "scripts": {
+    "clean": "rm -rf dist out-tsc",
+    "ngcc": "ngcc --create-ivy-entry-points",
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "lint": "ng lint"
+    "build": "pnpm run build-shared && pnpm run build-web && pnpm run build-handset",
+    "build-shared": "ng build app-shared --configuration production",
+    "build-web": "ng build web --configuration production",
+    "build-handset": "ng build handset --configuration production",
+    "watch-web": "ng build web --watch --configuration development",
+    "watch-handset": "ng build handset --watch --configuration development",
+    "start": "pnpm run watch-web"
   },
   "private": true,
   "dependencies": {
@@ -20,7 +25,15 @@
     "@angular/router": "~13.0.0",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "@angular/localize": "~13.0.0",
+    "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.7.1",
+    "@popperjs/core": "^2.10.2",
+    "@ng-bootstrap/ng-bootstrap": "^12.0.0-beta.4",
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@angular/cdk": "~13.0.0",
+    "@angular/material": "~13.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.0.3",

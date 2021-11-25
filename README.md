@@ -1,27 +1,46 @@
-# NgSeedCli
+# Angular Seed App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
+Seed project build with [Angular](https://angular.io/), [Font Awesome](https://fontawesome.com/) and [ng-bootstrap](https://ng-bootstrap.github.io/) .
 
-## Development server
+## Tech stack
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- typescript
+- angular
+- ng-bootstrap
+- font awesome
+- angular-cli
 
-## Code scaffolding
+## Usage
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+  1. Clone or fork this repository with git:
 
-## Build
+     ```shell
+     git clone https://github.com/angular/ng-seed.git
+     ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+  2. Install dependencies with npm:
 
-## Running unit tests
+     ```shell
+     npm install
+     ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+  3. Start with command
 
-## Running end-to-end tests
+     ```shell
+     npm start
+     ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+  4. Create a build
 
-## Further help
+     ```shell
+     npm run build
+     ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+  5. Happy coding!.
+
+PS: the `master` branch use `angular-cli` .
+
+- if you want to use `rollup` to do aot build and tree shaking, please check out the
+  [rollup](https://github.com/beginor/ng-seed/tree/rollup) branch.
+- if you prefer to build with [webpack](http://webpack.github.io), please check out the
+  [webpack](https://github.com/beginor/ng-seed/tree/webpack) branch.
