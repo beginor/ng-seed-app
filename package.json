@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "scripts": {
     "clean": "rm -rf dist out-tsc",
-    "ngcc": "ngcc --create-ivy-entry-points",
     "ng": "ng",
     "build": "pnpm run build-shared && pnpm run build-web && pnpm run build-handset",
     "build-shared": "ng build app-shared --configuration production",
