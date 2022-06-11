@@ -1,6 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
+  "defaultProject": "web",
   "cli": {
     "packageManager": "pnpm",
     "defaultCollection": "@angular-eslint/schematics"
@@ -50,11 +51,10 @@
     "handset": {
       "projectType": "application",
       "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss",
+        "@schematics/angular:class": {
           "skipTests": true
         },
-        "@schematics/angular:class": {
+        "@schematics/angular:component": {
           "skipTests": true
         },
         "@schematics/angular:directive": {
@@ -74,9 +74,6 @@
         },
         "@schematics/angular:service": {
           "skipTests": true
-        },
-        "@schematics/angular:application": {
-          "strict": true
         }
       },
       "root": "projects/handset",
@@ -91,13 +88,12 @@
             "main": "projects/handset/src/main.ts",
             "polyfills": "projects/handset/src/polyfills.ts",
             "tsConfig": "projects/handset/tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
             "assets": [
               "projects/handset/src/favicon.ico",
               "projects/handset/src/assets"
             ],
             "styles": [
-              "projects/handset/src/styles.scss"
+              "projects/handset/src/styles.css"
             ],
             "scripts": []
           },
@@ -159,13 +155,12 @@
             "polyfills": "projects/handset/src/polyfills.ts",
             "tsConfig": "projects/handset/tsconfig.spec.json",
             "karmaConfig": "projects/handset/karma.conf.js",
-            "inlineStyleLanguage": "scss",
             "assets": [
               "projects/handset/src/favicon.ico",
               "projects/handset/src/assets"
             ],
             "styles": [
-              "projects/handset/src/styles.scss"
+              "projects/handset/src/styles.css"
             ],
             "scripts": []
           }
@@ -184,11 +179,10 @@
     "web": {
       "projectType": "application",
       "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss",
+        "@schematics/angular:class": {
           "skipTests": true
         },
-        "@schematics/angular:class": {
+        "@schematics/angular:component": {
           "skipTests": true
         },
         "@schematics/angular:directive": {
@@ -208,9 +202,6 @@
         },
         "@schematics/angular:service": {
           "skipTests": true
-        },
-        "@schematics/angular:application": {
-          "strict": true
         }
       },
       "root": "projects/web",
@@ -225,13 +216,12 @@
             "main": "projects/web/src/main.ts",
             "polyfills": "projects/web/src/polyfills.ts",
             "tsConfig": "projects/web/tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
             "assets": [
               "projects/web/src/favicon.ico",
               "projects/web/src/assets"
             ],
             "styles": [
-              "projects/web/src/styles.scss"
+              "projects/web/src/styles.css"
             ],
             "scripts": []
           },
@@ -293,13 +283,12 @@
             "polyfills": "projects/web/src/polyfills.ts",
             "tsConfig": "projects/web/tsconfig.spec.json",
             "karmaConfig": "projects/web/karma.conf.js",
-            "inlineStyleLanguage": "scss",
             "assets": [
               "projects/web/src/favicon.ico",
               "projects/web/src/assets"
             ],
             "styles": [
-              "projects/web/src/styles.scss"
+              "projects/web/src/styles.css"
             ],
             "scripts": []
           }
@@ -315,6 +304,5 @@
         }
       }
     }
-  },
-  "defaultProject": "web"
+  }
 }
