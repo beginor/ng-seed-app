@@ -1,17 +1,13 @@
 {
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "ng serve",
       "type": "chrome",
       "request": "launch",
-      "name": "Chromium",
-      "url": "http://127.0.0.1:4200",
-      "webRoot": "${workspaceRoot}",
-      "osx": {
-        "runtimeExecutable": "/Applications/Chromium.app/Contents/MacOS/Chromium"
-      },
-      "runtimeArgs": ["--incognito"],
-      "disableNetworkCache": true
+      "preLaunchTask": "npm: start",
+      "url": "http://localhost:4200/"
     }
   ]
 }

@@ -1,22 +1,6 @@
-import { registerLocaleData } from '@angular/common';
-import zhHans from '@angular/common/locales/zh-Hans';
-import zhHansEx from '@angular/common/locales/extra/zh-Hans';
-import { enableProdMode } from '@angular/core';
-import { platformBrowser } from '@angular/platform-browser';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { appConfig } from './app/app.config';
+import { AppComponent } from './app/app.component';
 
-import { AppModule } from './app/app.module';
-import { environment } from './environments/environment';
-
-registerLocaleData(zhHans, 'zh-Hans', zhHansEx);
-
-if (environment.production) {
-    enableProdMode();
-}
-
-platformBrowser().bootstrapModule(AppModule)
-    .then(() => {
-        // console.log('app bootstrap');
-    })
-    .catch(err => {
-        console.error(err);
-    });
+bootstrapApplication(AppComponent, appConfig)
+  .catch((err) => console.error(err));
