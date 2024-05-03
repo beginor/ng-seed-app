@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'lib-app-shared',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   template: `
     <p>
       app-shared works!
