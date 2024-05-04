@@ -10,7 +10,7 @@
   </div>
 
   @if (vm.info | async; as info) {
-    <nz-alert nzType="info" [nzMessage]="info" nzCloseable>
+    <nz-alert nzType="info" nzShowIcon [nzMessage]="info" nzCloseable >
     </nz-alert>
   }
 </div>

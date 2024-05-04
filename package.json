@@ -29,7 +29,9 @@
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "@angular/cdk": "^17.3.0",
-    "ng-zorro-antd": "^17.4.0"
+    "ng-zorro-antd": "^17.4.0",
+    "@ant-design/icons-angular": "^17.0.0",
+    "date-fns": "^3.6.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.3.6",
