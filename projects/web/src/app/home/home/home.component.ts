@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AsyncPipe, NgIf } from '@angular/common';
-import { MatButton, } from '@angular/material/button';
+import { NzButtonComponent } from 'ng-zorro-antd/button';
+import { NzAlertComponent } from 'ng-zorro-antd/alert';
 
 import { SvgIconComponent } from 'app-shared';
 
@@ -10,7 +11,11 @@ import { HomeService } from './home.service';
 @Component({
     selector: 'app-home',
     standalone: true,
-    imports: [SvgIconComponent, AsyncPipe, NgIf, MatButton],
+    imports: [
+        AsyncPipe, NgIf,
+        NzButtonComponent, NzAlertComponent,
+        SvgIconComponent
+    ],
     providers: [HomeService],
     templateUrl: './home.component.html',
     styleUrl: './home.component.css'

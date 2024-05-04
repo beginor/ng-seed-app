@@ -1,16 +1,17 @@
 <div class="container p-5">
   <div class="row">
     <div class="col p-2 d-grid">
-      <button mat-raised-button color="primary" size="large"
+      <button nz-button nzType="primary" nzSize="large"
         (click)="vm.updateMessage()">
-        <svg-icon path="bi/app-indicator" iconClass="bi-lg"></svg-icon>
+        <svg-icon class="me-2" path="bi/app-indicator" iconClass="bi-lg"></svg-icon>
         {{vm.message | async}}
       </button>
     </div>
   </div>
 
-  <div *ngIf="(vm.info | async) as info" class="alert alert-warning mt-3">
-    {{info}}
-  </div>
+  @if (vm.info | async; as info) {
+    <nz-alert nzType="info" [nzMessage]="info" nzCloseable>
+    </nz-alert>
+  }
 
 </div>
