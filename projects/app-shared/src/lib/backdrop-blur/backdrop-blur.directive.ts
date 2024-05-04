@@ -2,7 +2,8 @@ import { AfterViewInit, Directive, ElementRef, Input } from '@angular/core';
 
 @Directive({
     // eslint-disable-next-line @angular-eslint/directive-selector
-    selector: '[backdropBlur]'
+    selector: '[backdropBlur]',
+    standalone: true,
 })
 export class BackdropBlurDirective implements AfterViewInit {
 

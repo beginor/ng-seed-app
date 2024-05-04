@@ -8,11 +8,12 @@
     "build-shared": "ng build app-shared --configuration production",
     "build-web": "ng build web --configuration production",
     "build-handset": "ng build handset --configuration production",
-    "watch-web": "ng build web --watch --configuration development",
-    "watch-handset": "ng build handset --watch --configuration development",
-    "start": "pnpm run watch-web"
+    "serve-web": "ng serve web --watch --configuration development",
+    "serve-handset": "ng serve handset --watch --configuration development",
+    "start": "pnpm run serve-web"
   },
   "private": true,
+  "type": "module",
   "dependencies": {
     "@angular/animations": "^17.3.0",
     "@angular/common": "^17.3.0",

@@ -1,10 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { AsyncPipe, NgIf } from '@angular/common';
+import { MatButton, } from '@angular/material/button';
+
+import { SvgIconComponent } from 'app-shared';
+
 import { HomeService } from './home.service';
+
 
 @Component({
     selector: 'app-home',
+    standalone: true,
+    imports: [SvgIconComponent, AsyncPipe, NgIf, MatButton],
+    providers: [HomeService],
     templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss']
+    styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit {
 

@@ -25,6 +25,13 @@
         "plugin:@angular-eslint/template/accessibility"
       ],
       "rules": {}
+    },
+    {
+      "files": ["*.js"],
+      "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": "latest"
+      }
     }
   ]
 }
