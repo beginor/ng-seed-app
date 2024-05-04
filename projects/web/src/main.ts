@@ -1,3 +1,5 @@
+/// <reference types="@angular/localize" />
+
 import { registerLocaleData } from '@angular/common';
 import zhHans from '@angular/common/locales/zh';
 import zhHansExtra from '@angular/common/locales/extra/zh';

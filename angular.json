@@ -212,7 +212,8 @@
             "index": "projects/web/src/index.html",
             "browser": "projects/web/src/main.ts",
             "polyfills": [
-              "zone.js"
+              "zone.js",
+              "projects/web/src/polyfills.ts"
             ],
             "tsConfig": "projects/web/tsconfig.app.json",
             "assets": [
