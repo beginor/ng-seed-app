@@ -40,6 +40,9 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+.nx/cache
+.nx/workspace-data
 package-lock.json
 pnpm-lock.yaml
 .angular
