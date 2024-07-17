@@ -7,6 +7,7 @@ import { provideNzI18n, zh_CN } from 'ng-zorro-antd/i18n';
 
 import { routes } from './app.routes';
 
+export const appConfig: ApplicationConfig = {
   providers: [
       provideZoneChangeDetection({ eventCoalescing: true }),
       provideRouter(routes),
@@ -14,4 +15,4 @@ import { routes } from './app.routes';
       provideAnimations(),
       provideNzI18n(zh_CN)
   ]
-
+}

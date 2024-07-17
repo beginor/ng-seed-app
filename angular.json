@@ -221,14 +221,6 @@
               {
                 "glob": "**/*",
                 "input": "projects/web/public"
-
-
-
-
-
-
-
-
               },
               {
                 "input": "node_modules/bootstrap-icons/icons",
