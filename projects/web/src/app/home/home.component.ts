@@ -15,7 +15,7 @@ import { HomeService } from './home.service';
         AsyncPipe,
         NzButtonComponent,
         NzAlertComponent,
-        SvgIconComponent
+        SvgIconComponent,
     ],
     providers: [HomeService],
     templateUrl: './home.component.html',
