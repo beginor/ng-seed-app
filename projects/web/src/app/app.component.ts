@@ -3,11 +3,10 @@ import { RouterOutlet, RouterLink } from '@angular/router';
 import { NzIconService } from 'ng-zorro-antd/icon';
 
 @Component({
-    selector: 'app-root',
-    standalone: true,
-    imports: [RouterOutlet, RouterLink],
-    templateUrl: './app.component.html',
-    styleUrl: './app.component.css'
+  selector: 'app-root',
+  imports: [RouterOutlet, RouterLink],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
 

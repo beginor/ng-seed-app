@@ -16,7 +16,7 @@
       "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "builder": "@angular/build:ng-packagr",
           "options": {
             "project": "projects/app-shared/ng-package.json"
           },
@@ -46,7 +46,8 @@
             "lintFilePatterns": [
               "projects/app-shared/**/*.ts",
               "projects/app-shared/**/*.html"
-            ]
+            ],
+            "eslintConfig": "projects/app-shared/eslint.config.js"
           }
         }
       }
@@ -115,8 +116,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
                 }
               ],
               "outputHashing": "all"
@@ -170,7 +171,8 @@
             "lintFilePatterns": [
               "projects/handset/**/*.ts",
               "projects/handset/**/*.html"
-            ]
+            ],
+            "eslintConfig": "projects/handset/eslint.config.js"
           }
         }
       }
@@ -264,8 +266,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
                 }
               ],
               "outputHashing": "all"
@@ -323,7 +325,8 @@
             "lintFilePatterns": [
               "projects/web/**/*.ts",
               "projects/web/**/*.html"
-            ]
+            ],
+            "eslintConfig": "projects/web/eslint.config.js"
           }
         }
       }
