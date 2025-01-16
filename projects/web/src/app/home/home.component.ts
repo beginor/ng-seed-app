@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AsyncPipe, NgIf } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 
 import { NzButtonComponent } from 'ng-zorro-antd/button';
 import { NzAlertComponent } from 'ng-zorro-antd/alert';
@@ -12,8 +12,9 @@ import { HomeService } from './home.service';
     selector: 'app-home',
     standalone: true,
     imports: [
-        AsyncPipe, NgIf,
-        NzButtonComponent, NzAlertComponent,
+        AsyncPipe,
+        NzButtonComponent,
+        NzAlertComponent,
         SvgIconComponent
     ],
     providers: [HomeService],
@@ -26,7 +27,7 @@ export class HomeComponent implements OnInit {
 
     public ngOnInit(): void { }
 
-    public onClick(): void {
+    protected onClick(): void {
         this.vm.updateMessage();
     }
 

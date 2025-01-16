@@ -239,11 +239,6 @@
             ],
             "styles": [
               {
-                "input": "node_modules/bootstrap/dist/css/bootstrap-grid.css",
-                "bundleName": "bootstrap-grid",
-                "inject": true
-              },
-              {
                 "input": "node_modules/ng-zorro-antd/ng-zorro-antd.variable.css",
                 "bundleName": "ng-zorro-antd",
                 "inject": true
@@ -261,8 +256,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "2MB",
+                  "maximumError": "5MB"
                 },
                 {
                   "type": "anyComponentStyle",

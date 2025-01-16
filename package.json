@@ -4,13 +4,9 @@
   "scripts": {
     "clean": "rm -rf dist out-tsc",
     "ng": "ng",
-    "build": "pnpm run build-shared && pnpm run build-web && pnpm run build-handset",
-    "build-shared": "ng build app-shared --configuration production",
-    "build-web": "ng build web --configuration production",
-    "build-handset": "ng build handset --configuration production",
-    "serve-web": "ng serve web --watch --configuration development",
-    "serve-handset": "ng serve handset --watch --configuration development",
-    "start": "pnpm run serve-web"
+    "build": "ng build",
+    "start": "ng serve",
+    "lint": "ng lint"
   },
   "private": true,
   "type": "module",
@@ -26,13 +22,11 @@
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0",
-    "bootstrap": "^5.3.3",
-    "bootstrap-icons": "^1.11.3",
-    "@angular/localize": "^18.1.0",
-    "@angular/cdk": "^18.1.0",
-    "ng-zorro-antd": "^18.0.1",
-    "@ant-design/icons-angular": "^18.0.0",
-    "date-fns": "^3.6.0"
+    "@angular/localize": "^19.1.0",
+    "@angular/cdk": "^19.1.0-rc.0",
+    "ng-zorro-antd": "^19.0.2",
+    "@ant-design/icons-angular": "^19.0.0",
+    "bootstrap-icons": "^1.11.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^19.1.0",
@@ -43,6 +37,9 @@
     "eslint": "^9.16.0",
     "ng-packagr": "^19.1.0",
     "typescript": "~5.7.2",
-    "typescript-eslint": "8.18.0"
+    "typescript-eslint": "8.18.0",
+    "tailwindcss": "^3.4.17",
+    "postcss": "^8.5.1",
+    "autoprefixer": "^10.4.20"
   }
 }

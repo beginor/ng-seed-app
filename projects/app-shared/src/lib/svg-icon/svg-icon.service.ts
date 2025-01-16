@@ -20,7 +20,7 @@ export class SvgIconService {
     public loadSvgFile(path: string): Promise<string> {
         const key = `svg-icon:${path}`;
         const loadedItem = sessionStorage.getItem(key);
-        if (!!loadedItem) {
+        if (loadedItem) {
             return Promise.resolve(loadedItem);
         }
         if (this.loadingMap.has(key)) {

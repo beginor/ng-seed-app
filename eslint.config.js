@@ -1,11 +1,11 @@
 // @ts-check
-const eslint = require("@eslint/js");
-const tseslint = require("typescript-eslint");
-const angular = require("angular-eslint");
+import eslint from '@eslint/js';
+import tseslint from 'typescript-eslint';
+import angular from 'angular-eslint';
 
-module.exports = tseslint.config(
+export default tseslint.config(
   {
-    files: ["**/*.ts"],
+    files: ["projects/**/*.ts"],
     extends: [
       eslint.configs.recommended,
       ...tseslint.configs.recommended,
@@ -13,7 +13,16 @@ module.exports = tseslint.config(
       ...angular.configs.tsRecommended,
     ],
     processor: angular.processInlineTemplates,
-    rules: {},
+    rules: {
+      "@angular-eslint/directive-selector": [
+        "error",
+        { type: "attribute", style: "camelCase" }
+      ],
+      "@angular-eslint/component-selector": [
+        "error",
+        { type: "element", style: "kebab-case" }
+      ]
+    },
   },
   {
     files: ["**/*.html"],
