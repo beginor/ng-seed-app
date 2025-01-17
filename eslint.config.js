@@ -1,11 +1,15 @@
 // @ts-check
 import eslint from '@eslint/js';
+import stylistic from '@stylistic/eslint-plugin'
 import tseslint from 'typescript-eslint';
 import angular from 'angular-eslint';
 
 export default tseslint.config(
   {
     files: ["projects/**/*.ts"],
+    plugins: {
+      '@stylistic': stylistic
+    },
     extends: [
       eslint.configs.recommended,
       ...tseslint.configs.recommended,
@@ -14,6 +18,47 @@ export default tseslint.config(
     ],
     processor: angular.processInlineTemplates,
     rules: {
+      'no-debugger': ['error'],
+      'no-console': ['warn', { allow: ['error'] }],
+      'no-prototype-builtins': ['off'],
+      '@stylistic/max-len': [
+        'error', {
+          code: 80,
+          tabWidth: 4,
+          ignoreComments: true,
+          ignoreTrailingComments: true,
+          ignoreUrls: true,
+          ignoreStrings: true,
+          ignoreTemplateLiterals: true,
+          ignoreRegExpLiterals: true,
+        }
+      ],
+      '@stylistic/quotes': ['error', 'single'],
+      '@typescript-eslint/no-explicit-any': ['warn'],
+      '@typescript-eslint/explicit-function-return-type': [
+        'error',
+        {
+          allowConciseArrowFunctionExpressionsStartingWithVoid: false,
+          allowDirectConstAssertionInArrowFunctions: true,
+          allowedNames: [],
+          allowExpressions: false,
+          allowFunctionsWithoutTypeParameters: false,
+          allowHigherOrderFunctions: true,
+          allowIIFEs: false,
+          allowTypedFunctionExpressions: true,
+        },
+      ],
+      '@typescript-eslint/explicit-member-accessibility': [
+        'error',
+        {
+          accessibility: 'explicit',
+          ignoredMethodNames: [],
+          overrides: {
+            accessors: 'explicit', constructors: 'off', methods: 'explicit',
+            parameterProperties: 'explicit', properties: 'explicit',
+          }
+        }
+      ],
       "@angular-eslint/directive-selector": [
         "error",
         { type: "attribute", style: "camelCase" }
@@ -30,6 +75,18 @@ export default tseslint.config(
       ...angular.configs.templateRecommended,
       ...angular.configs.templateAccessibility,
     ],
-    rules: {},
+    rules: {
+      '@angular-eslint/template/click-events-have-key-events': ['off'],
+      '@angular-eslint/template/interactive-supports-focus': ['off']
+    },
+  },
+  {
+    ignores: [
+      '.angular',
+      '.idea',
+      '.vscode',
+      'dist',
+      'node_modules',
+    ]
   }
 );
