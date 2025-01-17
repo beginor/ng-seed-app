@@ -38,14 +38,14 @@ export default tseslint.config(
       '@typescript-eslint/explicit-function-return-type': [
         'error',
         {
-          allowConciseArrowFunctionExpressionsStartingWithVoid: false,
-          allowDirectConstAssertionInArrowFunctions: true,
-          allowedNames: [],
-          allowExpressions: false,
-          allowFunctionsWithoutTypeParameters: false,
-          allowHigherOrderFunctions: true,
-          allowIIFEs: false,
+          allowExpressions: true,
           allowTypedFunctionExpressions: true,
+          allowHigherOrderFunctions: true,
+          allowDirectConstAssertionInArrowFunctions: true,
+          allowConciseArrowFunctionExpressionsStartingWithVoid: true,
+          allowFunctionsWithoutTypeParameters: true,
+          allowedNames: [],
+          allowIIFEs: true,
         },
       ],
       '@typescript-eslint/explicit-member-accessibility': [
