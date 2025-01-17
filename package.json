@@ -1,6 +1,7 @@
 {
   "name": "ng-seed-cli",
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -23,14 +24,15 @@
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^19.1.0",
-    "@angular/build": "^19.1.0",
+    "@angular-devkit/build-angular": "^19.1.1",
+    "@angular/build": "^19.1.1",
     "@angular/cli": "^19.1.0",
     "@angular/compiler-cli": "^19.1.0",
     "angular-eslint": "19.0.2",
     "eslint": "^9.16.0",
     "ng-packagr": "^19.1.0",
     "typescript": "~5.7.2",
-    "typescript-eslint": "8.18.0"
+    "typescript-eslint": "8.18.0",
+    "@stylistic/eslint-plugin": "^2.12.1"
   }
 }
