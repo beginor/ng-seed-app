@@ -21,9 +21,9 @@
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0",
-    "@angular/localize": "^19.1.0",
-    "@angular/cdk": "^19.1.0-rc.0",
-    "ng-zorro-antd": "^19.0.2",
+    "@angular/localize": "^19.2.0",
+    "@angular/cdk": "^19.2.0",
+    "ng-zorro-antd": "^19.2.1",
     "@ant-design/icons-angular": "^19.0.0",
     "bootstrap-icons": "^1.11.3"
   },
@@ -38,8 +38,8 @@
     "typescript-eslint": "8.27.0",
     "@stylistic/eslint-plugin": "^4.2.0",
     "@eslint/js": "9.23.0",
-    "tailwindcss": "^4.0.3",
-    "@tailwindcss/postcss": "^4.0.3",
+    "tailwindcss": "^4.1.4",
+    "@tailwindcss/postcss": "^4.1.4",
     "postcss": "^8.5.1"
   }
 }
