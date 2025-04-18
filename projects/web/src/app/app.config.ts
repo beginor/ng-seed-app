@@ -39,7 +39,7 @@ export const appConfig: ApplicationConfig = {
         },
         {
             provide: CONTEXT_ROOT,
-            useValue: '/ocr-pdf'
+            useValue: ''
         },
         {
             provide: APP_BASE_HREF,
