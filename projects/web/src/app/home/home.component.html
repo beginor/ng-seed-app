@@ -3,7 +3,7 @@
     <div class="flex-1 p-2 grid">
       <button nz-button nzType="primary" nzSize="large"
         (click)="vm.updateMessage()">
-        <svg-icon class="me-2" iconPath="bi/app-indicator" iconClass="bi-lg" />
+        <nz-icon class="me-2 text-xl" nzType="plus"  />
         {{vm.message | async}}
       </button>
     </div>

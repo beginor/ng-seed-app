@@ -1,0 +1,58 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.logo {
+  height: 72px;
+  padding: 16px 16px;
+}
+
+.logo-icon {
+  padding: 8px 4px 8px 12px;
+  line-height: 36px;
+  width: 36px;
+  height: 36px;
+}
+
+.logo-title {
+  opacity: 0;
+  height: 36px;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-delay: .2s;
+  animation-duration: .2s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.side-menu {
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.side-menu::-webkit-scrollbar {
+  width: 0.25rem;
+  height: 0.25rem;
+}
+.side-menu::-webkit-scrollbar-thumb:vertical {
+  height: 0.25rem;
+  border-radius: 0.25rem;
+  background-color: rgba(128, 128, 128, .4);
+}
+.side-menu::-webkit-scrollbar-thumb:horizontal {
+  width: 0.25rem;
+  border-radius: 0.25rem;
+  background-color: rgba(128, 128, 128, .4);
+}

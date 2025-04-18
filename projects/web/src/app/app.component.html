@@ -1,5 +1,20 @@
-<div class="mb-3">
-  <a routerLink="/home">Home</a>
-  <a routerLink="/about">About</a>
-</div>
-<router-outlet />
+<nz-layout class="app-main">
+  @if (ui.showSider()) {
+    <nz-sider [nzTheme]="ui.siderTheme()"
+      nzWidth="var(--app-nav-sidebar-width)"
+      nzCollapsible [(nzCollapsed)]="ui.siderCollapsed"
+      nzBreakpoint="xxl" [nzTrigger]="null">
+      <app-nav-sidebar [collapsed]="ui.siderCollapsed()" />
+    </nz-sider>
+  }
+  <nz-layout>
+    @if (ui.showHeader()) {
+      <nz-header class="layout-header mb-3">
+        <app-header />
+      </nz-header>
+    }
+    <nz-content class="router-main grow">
+      <router-outlet />
+    </nz-content>
+  </nz-layout>
+</nz-layout>

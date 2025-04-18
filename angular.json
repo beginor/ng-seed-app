@@ -227,11 +227,6 @@
                 "input": "projects/web/public"
               },
               {
-                "input": "node_modules/bootstrap-icons/icons",
-                "glob": "*.svg",
-                "output": "assets/icons/bi"
-              },
-              {
                 "input": "node_modules/@ant-design/icons-angular/src/inline-svg/",
                 "glob": "**/*.svg",
                 "output": "assets/icons/antd/assets"

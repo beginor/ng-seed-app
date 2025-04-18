@@ -1,0 +1,11 @@
+<div class="logo"
+  [class.text-white]="theme() === 'dark'"
+  [class.text-black]="theme() === 'light'">
+  <span class="logo-icon">
+    <nz-icon nzType="appstore"  class="text-2xl" />
+  </span>
+  <span class="logo-title select-none ps-2 text-xl text-nowrap truncate"
+    [class.hidden]="collapsed()">
+    Angular App
+  </span>
+</div>

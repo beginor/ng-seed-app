@@ -24,8 +24,7 @@
     "@angular/localize": "^19.2.0",
     "@angular/cdk": "^19.2.0",
     "ng-zorro-antd": "^19.2.1",
-    "@ant-design/icons-angular": "^19.0.0",
-    "bootstrap-icons": "^1.11.3"
+    "@ant-design/icons-angular": "^19.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^19.2.8",
