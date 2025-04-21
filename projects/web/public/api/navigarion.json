@@ -1,0 +1,32 @@
+[
+  {
+    "id": "/home",
+    "title": "首页",
+    "url": "/home",
+    "icon": "home"
+  },
+  {
+    "id": "/admin",
+    "title": "管理",
+    "url": "/admin",
+    "icon": "setting",
+    "children": [
+      {
+        "id": "/admin/users",
+        "title": "用户管理",
+        "url": "/admin/users"
+      },
+      {
+        "id": "/admin/roles",
+        "title": "角色管理",
+        "url": "/admin/roles"
+      }
+    ]
+  },
+  {
+    "id": "/about",
+    "title": "关于",
+    "url": "/about",
+    "icon": "info-circle"
+  }
+]

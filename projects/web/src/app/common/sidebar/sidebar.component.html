@@ -9,3 +9,35 @@
     Angular App
   </span>
 </div>
+@let nodes = vm.nodes();
+<ul class="side-menu" nz-menu [nzTheme]="theme()" nzMode="inline"
+  [nzInlineCollapsed]="collapsed()">
+  <ng-container *ngTemplateOutlet="menuTpl; context: { $implicit: { nodes, level: 1 } }"></ng-container>
+  <ng-template #menuTpl let-data>
+    @for (node of data.nodes; track node.id) {
+      @if (!node.isHidden) {
+        @if (node.children) {
+          <li nz-submenu [nzTitle]="node.title" [nzIcon]="data.level === 1 ? node.icon : undefined"
+            [nzPaddingLeft]="collapsed() && data.level > 1 ? 0 : data.level * 32"
+            [nzOpen]="collapsed() ? false : (node.url && router.url.startsWith(node.url + '/'))">
+            <ul>
+              <ng-container *ngTemplateOutlet="menuTpl; context: { $implicit: { nodes: node.children, level: data.level + 1 } }">
+              </ng-container>
+            </ul>
+          </li>
+        } @else {
+          <li nz-menu-item nzMatchRouter
+            [nzPaddingLeft]="collapsed() && data.level > 1 ? 0 : data.level * 32"
+            [nzSelected]="node.url && router.url.startsWith(node.url)"
+            [class.ant-menu-item-selected]="node.url && router.url.startsWith(node.url)"
+            (click)="navigateByUrl(node.url)">
+            @if (data.level === 1) {
+              <nz-icon [nzType]="node.icon ?? 'stop'"></nz-icon>
+            }
+            <span>{{node.title}}</span>
+          </li>
+        }
+      }
+    }
+  </ng-template>
+</ul>

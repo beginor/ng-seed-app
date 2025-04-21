@@ -20,11 +20,11 @@ import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
     providers: [
-        provideZoneChangeDetection ({eventCoalescing: true}),
-        provideRouter (routes),
-        provideHttpClient (withFetch ()),
-        provideAnimationsAsync (),
-        provideNzI18n (zh_CN),
+        provideZoneChangeDetection({eventCoalescing: true}),
+        provideRouter(routes),
+        provideHttpClient(withFetch()),
+        provideAnimationsAsync(),
+        provideNzI18n(zh_CN),
         {
             provide: NzModalService,
             useClass: NzModalService,
@@ -44,14 +44,14 @@ export const appConfig: ApplicationConfig = {
         {
             provide: APP_BASE_HREF,
             useFactory: (): string => {
-                const contextRoot = inject (CONTEXT_ROOT);
+                const contextRoot = inject(CONTEXT_ROOT);
                 return `${contextRoot}/web/`;
             },
         },
         {
             provide: API_ROOT,
             useFactory: (): string => {
-                const contextRoot = inject (CONTEXT_ROOT);
+                const contextRoot = inject(CONTEXT_ROOT);
                 return `${contextRoot}/api`;
             },
         },
