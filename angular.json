@@ -229,7 +229,12 @@
               {
                 "input": "node_modules/@ant-design/icons-angular/src/inline-svg/",
                 "glob": "**/*.svg",
-                "output": "assets/icons/antd/assets"
+                "output": "assets"
+              },
+              {
+                "input": "node_modules/bootstrap-icons/icons",
+                "glob": "*.svg",
+                "output": "assets/bi"
               }
             ],
             "styles": [

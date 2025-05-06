@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { APP_BASE_HREF } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { NzIconService } from 'ng-zorro-antd/icon';
@@ -22,10 +23,12 @@ import { HeaderComponent } from './common/header/header.component';
 export class AppComponent {
 
     constructor(
+        @Inject(APP_BASE_HREF) appBaseHref: string,
         nzIconService: NzIconService,
         protected ui: UiService,
     ) {
-        nzIconService.changeAssetsSource ('assets/icons/antd/');
+        console.log(appBaseHref);
+        nzIconService.changeAssetsSource(appBaseHref);
     }
 
 }
