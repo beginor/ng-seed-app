@@ -39,7 +39,7 @@ export const appConfig: ApplicationConfig = {
         },
         {
             provide: CONTEXT_ROOT,
-            useValue: ''
+            useValue: '/app'
         },
         {
             provide: APP_BASE_HREF,
