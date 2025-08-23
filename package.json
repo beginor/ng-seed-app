@@ -1,6 +1,7 @@
 {
   "name": "ng-seed-cli",
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -40,6 +41,7 @@
     "@eslint/js": "^9.33.0",
     "angular-eslint": "20.2.0",
     "eslint": "^9.33.0",
+    "@stylistic/eslint-plugin": "^5.2.3",
     "ng-packagr": "^20.2.0",
     "typescript": "~5.9.2",
     "typescript-eslint": "8.40.0"
