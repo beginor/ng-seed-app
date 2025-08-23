@@ -1,7 +1,6 @@
 {
   "name": "ng-seed-cli",
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,29 +8,40 @@
     "watch": "ng build --watch --configuration development",
     "lint": "ng lint"
   },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": "*.html",
+        "options": {
+          "parser": "angular"
+        }
+      }
+    ]
+  },
   "private": true,
   "dependencies": {
-    "@angular/common": "^19.2.0",
-    "@angular/compiler": "^19.2.0",
-    "@angular/core": "^19.2.0",
-    "@angular/forms": "^19.2.0",
-    "@angular/platform-browser": "^19.2.0",
-    "@angular/platform-browser-dynamic": "^19.2.0",
-    "@angular/router": "^19.2.0",
+    "@angular/common": "^20.2.0",
+    "@angular/compiler": "^20.2.0",
+    "@angular/core": "^20.2.0",
+    "@angular/forms": "^20.2.0",
+    "@angular/platform-browser": "^20.2.0",
+    "@angular/router": "^20.2.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^19.2.13",
-    "@angular/cli": "^19.2.13",
-    "@angular/compiler-cli": "^19.2.0",
-    "angular-eslint": "19.5.0",
-    "eslint": "^9.27.0",
-    "ng-packagr": "^19.2.0",
-    "typescript": "~5.7.2",
-    "typescript-eslint": "8.32.1",
-    "@stylistic/eslint-plugin": "^4.4.0",
-    "@eslint/js": "9.27.0"
+    "@angular-eslint/builder": "20.2.0",
+    "@angular/build": "^20.2.0",
+    "@angular/cli": "^20.2.0",
+    "@angular/compiler-cli": "^20.2.0",
+    "@eslint/js": "^9.33.0",
+    "angular-eslint": "20.2.0",
+    "eslint": "^9.33.0",
+    "ng-packagr": "^20.2.0",
+    "typescript": "~5.9.2",
+    "typescript-eslint": "8.40.0"
   }
 }
