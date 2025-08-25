@@ -1,7 +1,10 @@
 import { APP_BASE_HREF } from '@angular/common';
 import {
-    LOCALE_ID, inject, ApplicationConfig,
-    provideZoneChangeDetection
+    ApplicationConfig,
+    provideBrowserGlobalErrorListeners
+    provideZoneChangeDetection,
+    LOCALE_ID,
+    inject,
 } from '@angular/core';
 import {
     provideHttpClient, withFetch,
@@ -20,6 +23,7 @@ import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
     providers: [
+        provideBrowserGlobalErrorListeners(),
         provideZoneChangeDetection({eventCoalescing: true}),
         provideRouter(routes),
         provideHttpClient(withFetch()),
