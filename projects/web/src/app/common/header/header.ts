@@ -6,7 +6,7 @@ import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 
-import { UiService } from '../services/ui.service';
+import { UiService } from '../services/ui';
 
 
 @Component ({
@@ -18,8 +18,8 @@ import { UiService } from '../services/ui.service';
         NzIconModule,
         NzButtonModule,
     ],
-    templateUrl: './header.component.html',
-    styleUrl: './header.component.css'
+    templateUrl: './header.html',
+    styleUrl: './header.css'
 })
 export class HeaderComponent {
 

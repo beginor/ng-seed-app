@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { APP_BASE_HREF } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
@@ -9,7 +9,7 @@ import { UiService } from './common/services/ui';
 import { SidebarComponent } from './common/sidebar/sidebar';
 import { HeaderComponent } from './common/header/header';
 
-@Component({
+@Component ({
     selector: 'app-root',
     imports: [
         RouterModule,
@@ -20,15 +20,15 @@ import { HeaderComponent } from './common/header/header';
     templateUrl: './app.html',
     styleUrl: './app.css'
 })
-export class App implements OnInit {
+export class AppComponent {
 
-    private appBaseHref = inject<string>(APP_BASE_HREF);
-    private nzIconService = inject(NzIconService);
-    protected ui = inject(UiService);
-
-    public ngOnInit(): void {
-        this.nzIconService.changeAssetsSource(this.appBaseHref);
+    constructor(
+        @Inject(APP_BASE_HREF) appBaseHref: string,
+        nzIconService: NzIconService,
+        protected ui: UiService,
+    ) {
+        console.log(appBaseHref);
+        nzIconService.changeAssetsSource(appBaseHref);
     }
-
 
 }

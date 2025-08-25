@@ -6,7 +6,7 @@ import { NzAlertComponent } from 'ng-zorro-antd/alert';
 
 import { NzIconModule } from 'ng-zorro-antd/icon';
 
-import { UiService } from '../common/services/ui.service';
+import { UiService } from '../common/services/ui';
 import { HomeService } from './home.service';
 
 @Component({
@@ -19,8 +19,8 @@ import { HomeService } from './home.service';
         NzIconModule,
     ],
     providers: [HomeService],
-    templateUrl: './home.component.html',
-    styleUrl: './home.component.css'
+    templateUrl: './home.html',
+    styleUrl: './home.css'
 })
 export class HomeComponent implements OnInit {
 

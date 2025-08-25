@@ -5,8 +5,8 @@ import { RouterModule, Router } from '@angular/router';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 
-import { ThemeType } from '../services/ui.service';
-import { NavigationService } from '../services/navigation.service';
+import { ThemeType } from '../services/ui';
+import { NavigationService } from '../services/navigation';
 
 @Component ({
     selector: 'app-nav-sidebar',
@@ -16,8 +16,8 @@ import { NavigationService } from '../services/navigation.service';
         NzIconModule,
         NzMenuModule,
     ],
-    templateUrl: './sidebar.component.html',
-    styleUrl: './sidebar.component.css'
+    templateUrl: './sidebar.html',
+    styleUrl: './sidebar.css'
 })
 export class SidebarComponent {
 
