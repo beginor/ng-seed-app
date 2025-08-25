@@ -6,7 +6,7 @@ import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 
-import { UiService } from '../services/ui';
+import { Ui } from '../services/ui';
 
 
 @Component ({
@@ -23,6 +23,6 @@ import { UiService } from '../services/ui';
 })
 export class Header {
 
-    protected ui: UiService = inject(UiService);
+    protected ui: Ui = inject(Ui);
 
 }

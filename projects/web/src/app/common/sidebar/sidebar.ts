@@ -19,7 +19,7 @@ import { Navigation } from '../services/navigation';
     templateUrl: './sidebar.html',
     styleUrl: './sidebar.css'
 })
-export class SidebarComponent {
+export class Sidebar {
 
     public theme = input<ThemeType>('dark')
     public collapsed = input(true)

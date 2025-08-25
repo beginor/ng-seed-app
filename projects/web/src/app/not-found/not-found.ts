@@ -9,6 +9,6 @@ import { Component } from '@angular/core';
     `,
     styles: [':host { display: block; }']
 })
-export class NotFoundComponent {
+export class NotFound {
 
 }

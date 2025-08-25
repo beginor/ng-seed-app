@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Subject, BehaviorSubject } from 'rxjs';
 
 @Injectable({ providedIn: 'root'})
-export class HomeService {
+export class Home {
 
     public message = new BehaviorSubject<string>('Hello, angular !');
     public info = new Subject<string>();

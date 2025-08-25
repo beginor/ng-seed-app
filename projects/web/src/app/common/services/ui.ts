@@ -6,7 +6,7 @@ import { NzMessageService } from 'ng-zorro-antd/message';
 @Injectable({
     providedIn: 'root'
 })
-export class UiService {
+export class Ui {
 
     private nzModal = inject(NzModalService);
     private nzMessage = inject(NzMessageService);

@@ -6,8 +6,8 @@ import { NzAlertComponent } from 'ng-zorro-antd/alert';
 
 import { NzIconModule } from 'ng-zorro-antd/icon';
 
-import { UiService } from '../common/services/ui';
-import { HomeService } from './home.service';
+import { Ui as UiService } from '../common/services/ui';
+import { Home as HomeService } from '../common/services/home';
 
 @Component({
     selector: 'app-home',
@@ -18,11 +18,11 @@ import { HomeService } from './home.service';
         NzAlertComponent,
         NzIconModule,
     ],
-    providers: [HomeService],
+    providers: [Home],
     templateUrl: './home.html',
     styleUrl: './home.css'
 })
-export class HomeComponent implements OnInit {
+export class Home implements OnInit {
 
     protected ui = inject(UiService);
     protected vm = inject(HomeService);
