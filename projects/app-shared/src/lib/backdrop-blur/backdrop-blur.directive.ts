@@ -1,18 +1,15 @@
-import { AfterViewInit, Directive, ElementRef, Input } from '@angular/core';
+import { AfterViewInit, Directive, ElementRef, inject, input, } from '@angular/core';
 
 @Directive({
-    // eslint-disable-next-line @angular-eslint/directive-selector
     selector: '[backdropBlur]',
     standalone: true,
 })
 export class BackdropBlurDirective implements AfterViewInit {
 
-    @Input('backdropBlur') public blurSize = '12px';
-    @Input() public opacity = 0.8;
+    public blurSize = input('12px', { alias: 'backdropBlur' });
+    public opacity = input(0.8);
 
-    constructor(
-        private hostRef: ElementRef<HTMLElement>
-    ) { }
+    private hostRef = inject(ElementRef<HTMLElement>);
 
     public ngAfterViewInit(): void {
         const host = this.hostRef.nativeElement;
@@ -31,8 +28,9 @@ export class BackdropBlurDirective implements AfterViewInit {
         if (arr.length > 3) {
             a = Number.parseFloat(arr[3]);
         }
-        if (Math.abs(this.opacity - a) > 0.1) {
-            a = this.opacity;
+        const opacity = this.opacity();
+        if (Math.abs(opacity - a) > 0.1) {
+            a = opacity;
         }
         host.style.setProperty(
             'background-color',
@@ -41,7 +39,7 @@ export class BackdropBlurDirective implements AfterViewInit {
         );
         host.style.setProperty(
             'backdrop-filter',
-            `blur(${this.blurSize})`,
+            `blur(${this.blurSize()})`,
             'important'
         );
     }
