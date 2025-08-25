@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { NzBreadCrumbModule} from 'ng-zorro-antd/breadcrumb';
@@ -21,10 +21,8 @@ import { UiService } from '../services/ui';
     templateUrl: './header.html',
     styleUrl: './header.css'
 })
-export class HeaderComponent {
+export class Header {
 
-    constructor(
-        protected ui: UiService,
-    ) {
-    }
+    protected ui: UiService = inject(UiService);
+
 }

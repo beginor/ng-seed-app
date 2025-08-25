@@ -7,7 +7,7 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 
 import { UiService } from './common/services/ui';
 import { SidebarComponent } from './common/sidebar/sidebar';
-import { HeaderComponent } from './common/header/header';
+import { Header } from './common/header/header';
 
 @Component({
     selector: 'app-root',
@@ -15,7 +15,7 @@ import { HeaderComponent } from './common/header/header';
         RouterModule,
         NzLayoutModule,
         SidebarComponent,
-        HeaderComponent,
+        Header,
     ],
     templateUrl: './app.html',
     styleUrl: './app.css'

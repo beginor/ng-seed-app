@@ -1,4 +1,4 @@
-import { Injectable, Inject, signal } from '@angular/core';
+import { Injectable, signal, inject } from '@angular/core';
 import { APP_BASE_HREF } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 
@@ -7,15 +7,15 @@ import { API_ROOT } from 'app-shared';
 @Injectable({
     providedIn: 'root'
 })
-export class NavigationService {
+export class Navigation {
+
+    private http = inject(HttpClient);
+    private appBaseHref = inject(APP_BASE_HREF);
+    private apiRoot = inject(API_ROOT);
 
     public nodes = signal<NavigationNode[]>([]);
 
-    constructor(
-        private http: HttpClient,
-        @Inject(APP_BASE_HREF) private appBaseHref: string,
-        @Inject(API_ROOT) private apiRoot: string,
-    ) {
+    constructor() {
         this.loadNavigationNodes();
     }
 

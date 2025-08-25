@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { AsyncPipe } from '@angular/common';
 
 import { NzButtonComponent } from 'ng-zorro-antd/button';
@@ -24,10 +24,8 @@ import { HomeService } from './home.service';
 })
 export class HomeComponent implements OnInit {
 
-    constructor(
-        protected ui: UiService,
-        protected vm: HomeService
-    ) { }
+    protected ui = inject(UiService);
+    protected vm = inject(HomeService);
 
     public ngOnInit(): void {
         this.ui.breadcrumbs.set([
