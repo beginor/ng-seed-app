@@ -11,5 +11,5 @@ import { App } from './app/app';
 registerLocaleData(zhHans, 'zh-Hans', zhHansExtra);
 registerLocaleData(zhHans, 'zh-CN', zhHansExtra);
 
-bootstrapApplication(AppComponent, appConfig)
+bootstrapApplication(App, appConfig)
   .catch((err) => console.error(err));

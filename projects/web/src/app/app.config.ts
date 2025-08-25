@@ -1,7 +1,7 @@
 import { APP_BASE_HREF } from '@angular/common';
 import {
     ApplicationConfig,
-    provideBrowserGlobalErrorListeners
+    provideBrowserGlobalErrorListeners,
     provideZoneChangeDetection,
     LOCALE_ID,
     inject,
