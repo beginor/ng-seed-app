@@ -17,7 +17,6 @@
     "isolatedModules": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "sourceMap": true,
     "target": "ES2022",
     "module": "preserve"
   },
@@ -25,16 +24,12 @@
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "typeCheckHostBindings": true,
     "strictTemplates": true
   },
   "files": [],
   "references": [
     {
       "path": "./projects/app-shared/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/app-shared/tsconfig.spec.json"
     },
     {
       "path": "./projects/handset/tsconfig.app.json"

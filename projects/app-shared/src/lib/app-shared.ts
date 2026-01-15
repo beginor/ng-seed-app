@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
       app-shared works!
     </p>
   `,
-  styles: ``
+  styles: ``,
 })
 export class AppShared {
 

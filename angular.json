@@ -28,7 +28,7 @@
           "defaultConfiguration": "production"
         },
         "test": {
-          "builder": "@angular/build:karma",
+          "builder": "@angular/build:unit-test",
           "options": {
             "tsConfig": "projects/app-shared/tsconfig.spec.json"
           }
@@ -81,9 +81,6 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "projects/handset/src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
             "tsConfig": "projects/handset/tsconfig.app.json",
             "assets": [
               {
@@ -130,28 +127,6 @@
             }
           },
           "defaultConfiguration": "development"
-        },
-        "extract-i18n": {
-          "builder": "@angular/build:extract-i18n"
-        },
-        "test": {
-          "builder": "@angular/build:karma",
-          "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
-            "tsConfig": "projects/handset/tsconfig.spec.json",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "projects/handset/public"
-              }
-            ],
-            "styles": [
-              "projects/handset/src/styles.css"
-            ]
-          }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
@@ -201,9 +176,6 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "projects/web/src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
             "tsConfig": "projects/web/tsconfig.app.json",
             "assets": [
               {
@@ -250,28 +222,6 @@
             }
           },
           "defaultConfiguration": "development"
-        },
-        "extract-i18n": {
-          "builder": "@angular/build:extract-i18n"
-        },
-        "test": {
-          "builder": "@angular/build:karma",
-          "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
-            "tsConfig": "projects/web/tsconfig.spec.json",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "projects/web/public"
-              }
-            ],
-            "styles": [
-              "projects/web/src/styles.css"
-            ]
-          }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
