@@ -22,7 +22,7 @@ export class Navigation {
     }
 
     private loadNavigationNodes(): void {
-        const url = `${this.appBaseHref}navigarion.json`;
+        const url = `${this.appBaseHref}navigation.json`;
         this.http.get<NavigationSetting>(url).subscribe({
             next: result => {
                 this.icon.set(result.icon);
