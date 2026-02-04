@@ -14,6 +14,8 @@ export class Navigation {
     private apiRoot = inject(API_ROOT);
 
     public nodes = signal<NavigationNode[]>([]);
+    public icon = signal<string>('appstore');
+    public title = signal<string>('Angular App');
 
     constructor() {
         this.loadNavigationNodes();
@@ -21,11 +23,21 @@ export class Navigation {
 
     private loadNavigationNodes(): void {
         const url = `${this.appBaseHref}navigarion.json`;
-        this.http.get<NavigationNode[]>(url).subscribe(
-            data => this.nodes.set(data)
-        );
+        this.http.get<NavigationSetting>(url).subscribe({
+            next: result => {
+                this.icon.set(result.icon);
+                this.title.set(result.title);
+                this.nodes.set(result.nodes);
+            }
+        });
     }
 
+}
+
+export interface NavigationSetting {
+    icon: string;
+    title: string;
+    nodes: NavigationNode[];
 }
 
 export interface NavigationNode {
