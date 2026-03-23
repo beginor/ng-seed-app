@@ -3,9 +3,7 @@
   "version": 1,
   "cli": {
     "packageManager": "pnpm",
-    "schematicCollections": [
-      "@angular-eslint/schematics"
-    ]
+    "schematicCollections": ["@angular-eslint/schematics"]
   },
   "newProjectRoot": "projects",
   "projects": {
@@ -36,10 +34,7 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "projects/app-shared/**/*.ts",
-              "projects/app-shared/**/*.html"
-            ],
+            "lintFilePatterns": ["projects/app-shared/**/*.ts", "projects/app-shared/**/*.html"],
             "eslintConfig": "projects/app-shared/eslint.config.js"
           }
         }
@@ -93,9 +88,7 @@
                 "input": "projects/handset/public"
               }
             ],
-            "styles": [
-              "projects/handset/src/styles.css"
-            ]
+            "styles": ["projects/handset/src/styles.css"]
           },
           "configurations": {
             "production": {
@@ -136,10 +129,7 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "projects/handset/**/*.ts",
-              "projects/handset/**/*.html"
-            ],
+            "lintFilePatterns": ["projects/handset/**/*.ts", "projects/handset/**/*.html"],
             "eslintConfig": "projects/handset/eslint.config.js"
           }
         }
@@ -255,10 +245,7 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "projects/web/**/*.ts",
-              "projects/web/**/*.html"
-            ],
+            "lintFilePatterns": ["projects/web/**/*.ts", "projects/web/**/*.html"],
             "eslintConfig": "projects/web/eslint.config.js"
           }
         }

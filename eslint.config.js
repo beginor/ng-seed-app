@@ -4,7 +4,7 @@ import { dirname } from 'node:path';
 
 import { defineConfig } from 'eslint/config';
 import eslint from '@eslint/js';
-import stylistic from '@stylistic/eslint-plugin'
+import stylistic from '@stylistic/eslint-plugin';
 import tseslint from 'typescript-eslint';
 import angular from 'angular-eslint';
 

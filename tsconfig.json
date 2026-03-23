@@ -4,9 +4,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "app-shared": [
-        "./dist/app-shared"
-      ]
+      "app-shared": ["./dist/app-shared"]
     },
     "strict": true,
     "noImplicitOverride": true,
@@ -30,6 +28,9 @@
   "references": [
     {
       "path": "./projects/app-shared/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/app-shared/tsconfig.spec.json"
     },
     {
       "path": "./projects/handset/tsconfig.app.json"
