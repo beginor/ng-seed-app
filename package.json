@@ -23,10 +23,10 @@
     "zone.js": "~0.15.0",
     "@angular/localize": "^21.1.0",
     "@angular/cdk": "^21.1.0",
-    "ng-zorro-antd": "^21.0.2",
+    "ng-zorro-antd": "^21.2.0",
     "@ant-design/icons-angular": "^21.0.0",
     "bootstrap-icons": "^1.13.1",
-    "@tabler/icons": "^3.36.1"
+    "@tabler/icons": "^3.40.0"
   },
   "devDependencies": {
     "@angular-eslint/builder": "21.3.1",
@@ -43,8 +43,8 @@
     "typescript-eslint": "8.56.1",
     "vitest": "^4.0.8",
     "@stylistic/eslint-plugin": "^5.10.0",
-    "tailwindcss": "^4.1.18",
-    "@tailwindcss/postcss": "^4.1.18",
-    "postcss": "^8.5.6"
+    "tailwindcss": "^4.2.2",
+    "@tailwindcss/postcss": "^4.2.2",
+    "postcss": "^8.5.8"
   }
 }
