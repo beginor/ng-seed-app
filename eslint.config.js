@@ -1,14 +1,27 @@
 // @ts-check
+import { fileURLToPath } from 'node:url';
+import { dirname } from 'node:path';
+
+import { defineConfig } from 'eslint/config';
 import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin'
 import tseslint from 'typescript-eslint';
 import angular from 'angular-eslint';
 
-export default tseslint.config(
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+export default defineConfig(
   {
     files: ["projects/**/*.ts"],
     plugins: {
       '@stylistic': stylistic
+    },
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: __dirname,
+      }
     },
     extends: [
       eslint.configs.recommended,
@@ -70,7 +83,7 @@ export default tseslint.config(
     },
   },
   {
-    files: ["**/*.html"],
+    files: ["projects/**/*.html"],
     extends: [
       ...angular.configs.templateRecommended,
       ...angular.configs.templateAccessibility,
