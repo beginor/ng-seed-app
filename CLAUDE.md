@@ -37,4 +37,4 @@
   - `projects/handset/src/app/login/login/`
 - 配置：`eslint.config.mjs`，Angular schematics 默认 `skipTests: true`
 
-按照 `ANGULAR.md` 中的最佳实践与规则要求生成和重构代码；
+按照 [ANGULAR.md](./ANGULAR.md) 中的最佳实践与规则要求生成和重构代码；
